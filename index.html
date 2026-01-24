@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Notas Escolares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <header class="card__header">
+        <div>
+          <p class="eyebrow">Painel do Aluno</p>
+          <h1>Sistema simples de notas escolares</h1>
+          <p class="subtitle">
+            Visual claro, código moderno e foco em boas práticas para portfólio.
+          </p>
+        </div>
+        <span class="chip" data-year></span>
+      </header>
+
+      <section class="card__content">
+        <article class="panel profile">
+          <h2>Dados do aluno</h2>
+          <div class="profile__item">
+            <span>Nome</span>
+            <strong data-name></strong>
+          </div>
+          <div class="profile__item">
+            <span>Idade</span>
+            <strong data-age></strong>
+          </div>
+        </article>
+
+        <article class="panel notes">
+          <h2>Notas</h2>
+          <ul class="notes__list" data-notes></ul>
+        </article>
+
+        <article class="panel summary">
+          <h2>Resumo</h2>
+          <div class="summary__item">
+            <span>Média final</span>
+            <strong data-average></strong>
+          </div>
+          <div class="summary__item">
+            <span>Situação</span>
+            <strong class="status" data-status></strong>
+          </div>
+          <p class="summary__message" data-message></p>
+        </article>
+      </section>
+
+      <footer class="card__footer">
+        <span>Projeto front-end em JavaScript puro</span>
+        <span>Atualizado para portfólio</span>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
