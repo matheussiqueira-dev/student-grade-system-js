@@ -1,25 +1,19 @@
-# Student Grade System (JavaScript)
+# Dashboard Inteligente de Notas Escolares
 
-![Preview do projeto](assets/preview.svg)
+![Dashboard inteligente de notas escolares](assets/dashboard-inteligente-notas.gif)
 
-Projeto em JavaScript puro que evoluiu para um dashboard completo de notas escolares. O foco e em boas praticas, codigo limpo e uma interface moderna, pronta para portfolio profissional.
+Sistema front-end em JavaScript puro para gestao de notas escolares com media ponderada, indicadores em tempo real e persistencia local. Projetado para portfolio, com foco em clareza, usabilidade e boas praticas de engenharia.
 
-## Visao geral
-- Dashboard interativo com media ponderada e indicadores em tempo real.
-- Cadastro dinamico de notas com pesos.
-- Persistencia local via LocalStorage.
-- Status de aprovacao, margem para a media e nota necessaria na proxima avaliacao.
-
-## Funcionalidades
-- Formulario para atualizar dados do aluno e criterios de aprovacao.
-- Adicao, remocao e limpeza de avaliacoes.
-- Calculo de media ponderada com validacao de limites.
-- Projecao da nota necessaria considerando peso 1.
-- UI responsiva com feedback visual e animacoes suaves.
+## Principais recursos
+- Cadastro e edicao de dados do aluno e criterios de aprovacao.
+- Avaliacoes com notas e pesos, incluindo adicao e remocao.
+- Media ponderada, margem para aprovacao e nota necessaria para a proxima avaliacao.
+- Salvamento automatico via LocalStorage.
+- Interface responsiva com hierarquia visual e feedbacks de status.
 
 ## Tecnologias
 - HTML5
-- CSS3 (Grid/Flexbox, transicoes e responsividade)
+- CSS3 (Grid, Flexbox, transicoes e responsividade)
 - JavaScript (ES6+)
 
 ## Como executar
@@ -32,14 +26,15 @@ Projeto em JavaScript puro que evoluiu para um dashboard completo de notas escol
 ```
 .
 ├── assets
+│   ├── dashboard-inteligente-notas.gif
 │   └── preview.svg
 ├── index.html
 ├── style.css
 └── script.js
 ```
 
-## Resultado
-Interface moderna em estilo dashboard, com formularios claros, indicadores visuais e foco em usabilidade.
+## Autoria
+Autoria de Matheus Siqueira
 
-## Autor
-Matheus Siqueira
+## Site
+https://www.matheussiqueira.dev/
