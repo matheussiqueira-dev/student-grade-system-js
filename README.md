@@ -2,23 +2,24 @@
 
 ![Preview do projeto](assets/preview.svg)
 
-Projeto em JavaScript puro que simula um sistema simples de notas escolares. O foco está em boas práticas, código limpo e uma interface moderna, pronta para portfólio profissional.
+Projeto em JavaScript puro que evoluiu para um dashboard completo de notas escolares. O foco e em boas praticas, codigo limpo e uma interface moderna, pronta para portfolio profissional.
 
 ## Visao geral
-- Exibe dados do aluno, notas, media final e situacao.
-- Implementa logica com `reduce`, desestruturacao e spread operator.
-- UI responsiva com design clean em estilo dashboard.
+- Dashboard interativo com media ponderada e indicadores em tempo real.
+- Cadastro dinamico de notas com pesos.
+- Persistencia local via LocalStorage.
+- Status de aprovacao, margem para a media e nota necessaria na proxima avaliacao.
 
 ## Funcionalidades
-- Objeto `aluno` com metodo `calcularMedia()` usando `reduce`.
-- Adicao dinamica de nota com spread operator.
-- Funcao `verificarSituacao(media)` com retorno amigavel.
-- Logs completos no console (nome, idade, notas, media e situacao).
-- Interface com status colorido (Aprovado/Reprovado).
+- Formulario para atualizar dados do aluno e criterios de aprovacao.
+- Adicao, remocao e limpeza de avaliacoes.
+- Calculo de media ponderada com validacao de limites.
+- Projecao da nota necessaria considerando peso 1.
+- UI responsiva com feedback visual e animacoes suaves.
 
 ## Tecnologias
 - HTML5
-- CSS3 (Flexbox/Grid, transicoes e responsividade)
+- CSS3 (Grid/Flexbox, transicoes e responsividade)
 - JavaScript (ES6+)
 
 ## Como executar
@@ -38,10 +39,7 @@ Projeto em JavaScript puro que simula um sistema simples de notas escolares. O f
 ```
 
 ## Resultado
-Interface clean, card centralizado e hierarquia visual clara, com informacoes organizadas para leitura rapida.
+Interface moderna em estilo dashboard, com formularios claros, indicadores visuais e foco em usabilidade.
 
 ## Autor
 Matheus Siqueira
-
----
-Se quiser, posso adicionar versao com formulario para cadastrar aluno/notas dinamicamente.

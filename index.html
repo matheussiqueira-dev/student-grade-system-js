@@ -3,63 +3,198 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistema de Notas Escolares</title>
+    <title>Dashboard de Notas Escolares</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="card">
-      <header class="card__header">
-        <div>
-          <p class="eyebrow">Painel do Aluno</p>
-          <h1>Sistema simples de notas escolares</h1>
+    <main class="app">
+      <header class="app__header">
+        <div class="header__content">
+          <p class="eyebrow">Painel Acadêmico</p>
+          <h1>Dashboard inteligente de notas escolares</h1>
           <p class="subtitle">
-            Visual claro, código moderno e foco em boas práticas para portfólio.
+            Gerencie avaliações, pesos e a média ponderada com indicadores em
+            tempo real.
           </p>
         </div>
-        <span class="chip" data-year></span>
+        <div class="header__meta">
+          <span class="tag" data-year></span>
+          <span class="tag tag--accent">Atualização v2</span>
+        </div>
       </header>
 
-      <section class="card__content">
-        <article class="panel profile">
-          <h2>Dados do aluno</h2>
-          <div class="profile__item">
-            <span>Nome</span>
-            <strong data-name></strong>
+      <section class="app__grid">
+        <article class="card card--profile">
+          <div class="card__head">
+            <div>
+              <h2>Aluno</h2>
+              <p>Atualize dados e critérios de aprovação.</p>
+            </div>
           </div>
-          <div class="profile__item">
-            <span>Idade</span>
-            <strong data-age></strong>
+          <form class="form" data-student-form>
+            <label class="field">
+              <span>Nome completo</span>
+              <input
+                type="text"
+                name="student-name"
+                autocomplete="name"
+                placeholder="Nome do aluno"
+                data-student-name
+              />
+            </label>
+            <label class="field">
+              <span>Idade</span>
+              <input
+                type="number"
+                name="student-age"
+                min="5"
+                max="120"
+                step="1"
+                data-student-age
+              />
+            </label>
+            <label class="field">
+              <span>Nota máxima</span>
+              <input
+                type="number"
+                name="max-score"
+                min="1"
+                max="100"
+                step="0.1"
+                data-max-score
+              />
+            </label>
+            <label class="field">
+              <span>Média de aprovação</span>
+              <input
+                type="number"
+                name="pass-threshold"
+                min="0"
+                max="100"
+                step="0.1"
+                data-pass-threshold
+              />
+            </label>
+          </form>
+          <div class="card__actions">
+            <button class="button button--ghost" type="button" data-reset>
+              Restaurar dados
+            </button>
+            <span class="hint">Salvamento automático no navegador</span>
           </div>
         </article>
 
-        <article class="panel notes">
-          <h2>Notas</h2>
-          <ul class="notes__list" data-notes></ul>
+        <article class="card card--grades">
+          <div class="card__head">
+            <div>
+              <h2>Avaliações</h2>
+              <p>Adicione notas, pesos e acompanhe a evolução.</p>
+            </div>
+          </div>
+
+          <ul class="grades" data-grade-list></ul>
+          <p class="empty" data-empty>
+            Nenhuma avaliação cadastrada. Comece adicionando a primeira nota.
+          </p>
+
+          <form class="grade-form" data-grade-form>
+            <label class="field">
+              <span>Atividade</span>
+              <input
+                type="text"
+                name="grade-label"
+                placeholder="Ex: Prova 1"
+                data-grade-label
+              />
+            </label>
+            <label class="field">
+              <span>Nota</span>
+              <input
+                type="number"
+                name="grade-score"
+                min="0"
+                step="0.1"
+                required
+                data-grade-score
+              />
+            </label>
+            <label class="field">
+              <span>Peso</span>
+              <input
+                type="number"
+                name="grade-weight"
+                min="0.1"
+                max="10"
+                step="0.1"
+                value="1"
+                data-grade-weight
+              />
+            </label>
+            <button class="button button--primary" type="submit">
+              Adicionar nota
+            </button>
+          </form>
         </article>
 
-        <article class="panel summary">
-          <h2>Resumo</h2>
-          <div class="summary__item">
-            <span>Média final</span>
-            <strong data-average></strong>
+        <article class="card card--summary">
+          <div class="card__head">
+            <div>
+              <h2>Resumo</h2>
+              <p>Indicadores, margem e projeções automáticas.</p>
+            </div>
           </div>
-          <div class="summary__item">
-            <span>Situação</span>
-            <strong class="status" data-status></strong>
+
+          <div class="summary">
+            <div class="summary__highlight">
+              <div>
+                <span class="label">Média ponderada</span>
+                <strong class="average" data-average>--</strong>
+                <div class="progress" role="presentation">
+                  <div class="progress__bar" data-average-bar></div>
+                </div>
+              </div>
+              <div class="status" data-status aria-live="polite"></div>
+            </div>
+
+            <div class="summary__grid">
+              <div class="metric">
+                <span>Avaliações</span>
+                <strong data-count>0</strong>
+              </div>
+              <div class="metric">
+                <span>Maior nota</span>
+                <strong data-max>--</strong>
+              </div>
+              <div class="metric">
+                <span>Menor nota</span>
+                <strong data-min>--</strong>
+              </div>
+              <div class="metric">
+                <span>Margem para aprovação</span>
+                <strong data-margin>--</strong>
+              </div>
+              <div class="metric">
+                <span>Nota necessária (peso 1)</span>
+                <strong data-required>--</strong>
+              </div>
+            </div>
+
+            <p class="summary__message" data-message></p>
           </div>
-          <p class="summary__message" data-message></p>
         </article>
       </section>
 
-      <footer class="card__footer">
-        <span>Projeto front-end em JavaScript puro</span>
-        <span>Atualizado para portfólio</span>
+      <footer class="app__footer">
+        <span>Dados salvos localmente no navegador</span>
+        <button class="button button--ghost" type="button" data-clear-grades>
+          Limpar avaliações
+        </button>
       </footer>
     </main>
 
